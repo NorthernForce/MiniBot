@@ -1,0 +1,16 @@
+[
+  {
+    "name": "MiniBot1 (in project MiniBot1)",
+    "file": "C:\\Users\\Trevin Macomber\\BAE\\MiniBot1\\build\\libs\\MiniBot1.jar",
+    "extensions": [
+      "C:\\Users\\Trevin Macomber\\BAE\\MiniBot1\\build\\tmp\\expandedArchives\\halsim_gui-2021.2.1-windowsx86.zip_b93f5bf237d328edc8ea777215a80375\\windows\\x86\\shared\\halsim_gui.dll",
+      "C:\\Users\\Trevin Macomber\\BAE\\MiniBot1\\build\\tmp\\expandedArchives\\halsim_ds_socket-2021.2.1-windowsx86.zip_17d0037654924e9d1e7ef466b34a7a47\\windows\\x86\\shared\\halsim_ds_socket.dll",
+      "C:\\Users\\Trevin Macomber\\BAE\\MiniBot1\\build\\tmp\\expandedArchives\\halsim_ws_client-2021.2.1-windowsx86.zip_3422f772f4d05a2eb3ebfe041cc6186a\\windows\\x86\\shared\\halsim_ws_client.dll"
+    ],
+    "env": {
+      "HALSIMWS_HOST": "10.0.0.2"
+    },
+    "librarydir": "C:\\Users\\Trevin Macomber\\BAE\\MiniBot1\\build\\tmp\\jniExtractDir",
+    "mainclass": "frc.robot.Main"
+  }
+]
