@@ -35,7 +35,7 @@ public class ArcDriveDegrees extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    m_right = (m_degrees > 0);
+    m_right = (m_degrees > 0.0);
     m_powerScale = (m_radius - 2.7755)/(m_radius + 2.7755); //2.7755 is half of the distance between the wheels
     m_drive.resetEncoders();
   }
@@ -43,12 +43,12 @@ public class ArcDriveDegrees extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    // System.out.print(m_powerScale);
+    // System.out.print(m_right);
     if (m_right) {
-      m_drive.DifferentialDrive(m_speed,-(m_speed * m_powerScale));
+      m_drive.DifferentialDrive(m_speed,(m_speed * m_powerScale));
     }
     else {
-      m_drive.DifferentialDrive((m_speed * m_powerScale), -m_speed);
+      m_drive.DifferentialDrive((m_speed * m_powerScale), m_speed);
     }
   }
 
@@ -61,7 +61,7 @@ public class ArcDriveDegrees extends CommandBase {
   public boolean isFinished() {
     double inchPerDegree = Math.PI * m_radius / 180;
     // Compare distance travelled from start to distance based on degree turn
-    return getAverageTurningDistance() >= (inchPerDegree * m_degrees);
+    return getAverageTurningDistance() >= Math.abs(inchPerDegree * m_degrees);
   }
 
   private double getAverageTurningDistance() {

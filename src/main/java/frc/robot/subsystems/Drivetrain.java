@@ -48,7 +48,7 @@ public class Drivetrain extends SubsystemBase {
 
   public void DifferentialDrive(double left, double right) {
     m_leftMotor.set(left);
-    m_rightMotor.set(right);
+    m_rightMotor.set(-right);
   }
 
   public void resetEncoders() {
