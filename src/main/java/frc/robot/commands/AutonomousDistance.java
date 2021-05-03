@@ -16,25 +16,32 @@ public class AutonomousDistance extends SequentialCommandGroup {
    */
   public AutonomousDistance(Drivetrain drivetrain) {
     addCommands(
-      //Perfect Measurements:
-        // new DriveDistance(0.5, 4.5, drivetrain),
-        // new ArcDriveDegrees(0.5, 13.5, -90, drivetrain),
-        // new ArcDriveDegrees(0.5, 4.5, -116.5, drivetrain),
-        // new DriveDistance(0.5, 12.8, drivetrain),
-        // new ArcDriveDegrees(0.5, 4.5, 116.5, drivetrain),
-        // new ArcDriveDegrees(0.5, 13.5, 90, drivetrain),
-        // new DriveDistance(0.5, 4.5, drivetrain),
-        // new StopDrive(drivetrain));
+        new DriveDistance(0.5, 7.5, drivetrain),
+        new ArcDriveDegrees(0.6, 7.5, -90, drivetrain),
+        new DriveDistance(0.3, 3.0, drivetrain),
 
-      //Adjusted Measurements:
-        new DriveDistance(0.5, 3, drivetrain),
-        new ArcDriveDegrees(0.7, 12.615, -90, drivetrain),
-        new ArcDriveDegrees(0.7, 4, -119, drivetrain),
-        new DriveDistance(0.7, 16, drivetrain),
-        new ArcDriveDegrees(0.6, 4.2, 109, drivetrain),
-        new DriveDistance(0.6, 0.825, drivetrain),
-        new ArcDriveDegrees(0.65, 12.615, 83, drivetrain),
-        new DriveDistance(0.45, 5.76, drivetrain),
+        new ArcDriveDegrees(0.3, 0.0, 180, drivetrain),
+        new DriveDistance(0.5, 3.0, drivetrain),
+        new ArcDriveDegrees(0.6, 7.5, 22.5, drivetrain),
+        new DriveDistance(0.5, 16.7, drivetrain),
+        new ArcDriveDegrees(0.6, 7.5, 67.5, drivetrain),
+        new ArcDriveDegrees(0.6, 7.5, -90, drivetrain),
+        new DriveDistance(0.5, 15.0, drivetrain),
+        new DriveDistance(0.3, 3.0, drivetrain),
+
+        new ArcDriveDegrees(0.3, 0.0, 180, drivetrain),
+        new DriveDistance(0.5, 18.0, drivetrain),
+        new ArcDriveDegrees(0.6, 7.5, -90, drivetrain),
+        new DriveDistance(0.5, 7.5, drivetrain),
+        new ArcDriveDegrees(0.6, 7.5, -90, drivetrain),
+        new DriveDistance(0.5, 15.0, drivetrain),
+        new DriveDistance(0.3, 3.0, drivetrain),
+
+        new ArcDriveDegrees(0.3, 0.0, 180, drivetrain),
+        new DriveDistance(0.5, 3.0, drivetrain),
+        new ArcDriveDegrees(0.6, 7.5, -90, drivetrain),
+        new DriveDistance(0.5, 7.5, drivetrain),
+
         new StopDrive(drivetrain));
   }
 }
