@@ -21,7 +21,6 @@ public class ArcDriveDegrees extends CommandBase {
   private boolean m_right;
   private double m_powerScale;
 
-
   public ArcDriveDegrees(double speed, double radius, double degrees, Drivetrain drive) {
     m_speed = speed;
     m_radius = radius;
@@ -45,10 +44,10 @@ public class ArcDriveDegrees extends CommandBase {
   public void execute() {
     // System.out.print(m_right);
     if (m_right) {
-      m_drive.DifferentialDrive(m_speed,(m_speed * m_powerScale));
+      m_drive.CorrectedTankDrive(m_speed,(m_speed * m_powerScale));
     }
     else {
-      m_drive.DifferentialDrive((m_speed * m_powerScale), m_speed);
+      m_drive.CorrectedTankDrive((m_speed * m_powerScale), m_speed);
     }
   }
 

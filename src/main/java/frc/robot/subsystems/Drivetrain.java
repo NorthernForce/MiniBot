@@ -51,6 +51,18 @@ public class Drivetrain extends SubsystemBase {
     m_rightMotor.set(-right);
   }
 
+  public void CorrectedTankDrive(double left, double right) {
+    final double m_correction = 0.9945698630246768; //updated from DriftCorrection
+    if (m_correction < 1) {
+      m_leftMotor.set(left * m_correction);
+      m_rightMotor.set(-right);
+    }
+    else {
+      m_leftMotor.set(left);
+      m_rightMotor.set(-right * m_correction);
+    }
+  }
+
   public void resetEncoders() {
     m_leftEncoder.reset();
     m_rightEncoder.reset();
